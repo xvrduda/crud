@@ -2,11 +2,11 @@ package br.com.belval.crud.repository;
 
 import java.util.List;
 import org.springframework.data.repository.CrudRepository;
-import br.com.belval.crud.model.Produto;
+import br.com.belval.crud.model.Cliente;
 
-public interface ProdutoRepository extends CrudRepository<Produto, Integer> {
+public interface ProdutoRepository extends CrudRepository<Cliente, Integer> {
 	
-	  List<Produto> findByDescricao(String descricao);
+	  List<Cliente> findByDescricao(String descricao);
 
-	  Produto findById(int id);
+	  Cliente findById(int id);
 }

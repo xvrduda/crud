@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import br.com.belval.crud.model.Produto;
+import br.com.belval.crud.model.Cliente;
 import br.com.belval.crud.repository.ProdutoRepository;
 
 @Controller
-public class ProdutoController {
+public class ClienteController {
 
 	//private static List<Produto> listaProdutos = new ArrayList<Produto>();
 	//private static int proxId = 1;
@@ -25,12 +25,12 @@ public class ProdutoController {
 	public ModelAndView novo() {
 		//return "novo-produto";
 		ModelAndView modelAndView = new ModelAndView("novo-produto");
-		modelAndView.addObject("produto", new Produto());
+		modelAndView.addObject("produto", new Cliente());
 		return modelAndView;
 	}
 
 	@PostMapping("/produto/novo")
-	public ModelAndView novo(Produto produto, RedirectAttributes redirectAttributes) {
+	public ModelAndView novo(Cliente produto, RedirectAttributes redirectAttributes) {
 		ModelAndView modelAndView = new ModelAndView("redirect:/produto/list");
 		String msg = "";
 		if (produto.getId() == 0) {
@@ -54,7 +54,7 @@ public class ProdutoController {
 	
 	@GetMapping("/produto/{id}")
 	public String detalhe(@PathVariable("id") int id, Model model) {
-		Produto p = repository.findById(id);
+		Cliente p = repository.findById(id);
 		if (p == null) {
 			return "produto-nao-encontrado";
 		}
@@ -64,7 +64,7 @@ public class ProdutoController {
 	
 	@GetMapping("/produto/{id}/edit")
 	public String edit(@PathVariable("id") int id, Model model) {
-		Produto p = repository.findById(id);
+		Cliente p = repository.findById(id);
 		if (p == null) {
 			return "produto-nao-encontrado";
 		}
@@ -74,7 +74,7 @@ public class ProdutoController {
 	
 	@GetMapping("/produto/{id}/delete")
 	public String delete(@PathVariable("id") int id) {
-		Produto p = repository.findById(id);
+		Cliente p = repository.findById(id);
 		if (p == null) {
 			return "produto-nao-encontrado";
 		}
