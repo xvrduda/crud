@@ -10,76 +10,77 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import br.com.belval.crud.model.Cliente;
-import br.com.belval.crud.repository.ProdutoRepository;
+import br.com.belval.crud.repository.ClienteRepository;
+
 
 @Controller
 public class ClienteController {
 
-	//private static List<Produto> listaProdutos = new ArrayList<Produto>();
+	//private static List<Cliente> listaClientes = new ArrayList<Cliente>();
 	//private static int proxId = 1;
 	@Autowired
-	private ProdutoRepository repository;
+	private ClienteRepository repository;
 
 
-	@GetMapping("/produto/novo")
+	@GetMapping("/cliente/novo")
 	public ModelAndView novo() {
-		//return "novo-produto";
-		ModelAndView modelAndView = new ModelAndView("novo-produto");
-		modelAndView.addObject("produto", new Cliente());
+		//return "novo-cliente";
+		ModelAndView modelAndView = new ModelAndView("novo-cliente");
+		modelAndView.addObject("cliente", new Cliente());
 		return modelAndView;
 	}
 
-	@PostMapping("/produto/novo")
-	public ModelAndView novo(Cliente produto, RedirectAttributes redirectAttributes) {
-		ModelAndView modelAndView = new ModelAndView("redirect:/produto/list");
+	@PostMapping("/cliente/novo")
+	public ModelAndView novo(Cliente cliente, RedirectAttributes redirectAttributes) {
+		ModelAndView modelAndView = new ModelAndView("redirect:/cliente/list");
 		String msg = "";
-		if (produto.getId() == 0) {
-			msg = "Novo produto criado!";
+		if (cliente.getId() == 0) {
+			msg = "Parabéns, cadastro feito!";
 		} else {
-			msg = "Produto atualizado!";
+			msg = "cadastro atualizado!";
 		}
 		redirectAttributes.addFlashAttribute("msg", msg);
-		repository.save(produto);
+		repository.save(cliente);
 		return modelAndView;
 
 	}
 
-	@GetMapping("/produto/list")
+	@GetMapping("/cliente/list")
 	public ModelAndView list() {
-		ModelAndView modelAndView = new ModelAndView("lista-produtos");
-		//modelAndView.addObject("produtos", listaProdutos);
-		modelAndView.addObject("produtos", repository.findAll());
+		ModelAndView modelAndView = new ModelAndView("lista-cliente");
+		//modelAndView.addObject("clientes", listaClientes);
+		modelAndView.addObject("clientes", repository.findAll());
 		return modelAndView;
 	}
 	
-	@GetMapping("/produto/{id}")
+	@GetMapping("/cliente/{id}")
 	public String detalhe(@PathVariable("id") int id, Model model) {
 		Cliente p = repository.findById(id);
 		if (p == null) {
-			return "produto-nao-encontrado";
+			return "cliente-nao-encontrado";
 		}
-		model.addAttribute("produto", p);
-		return "detalhe-produto";
+		model.addAttribute("cliente", p);
+		return "detalhe-cliente";
 	}
 	
-	@GetMapping("/produto/{id}/edit")
+	@GetMapping("/cliente/{id}/edit")
 	public String edit(@PathVariable("id") int id, Model model) {
 		Cliente p = repository.findById(id);
 		if (p == null) {
-			return "produto-nao-encontrado";
+			return "cliente-nao-encontrado";
 		}
-		model.addAttribute("produto", p);
-		return "novo-produto";
+		model.addAttribute("cliente", p);
+		return "novo-cliente";
 	}
 	
-	@GetMapping("/produto/{id}/delete")
+	@GetMapping("/cliente/{id}/delete")
 	public String delete(@PathVariable("id") int id) {
 		Cliente p = repository.findById(id);
 		if (p == null) {
-			return "produto-nao-encontrado";
+			return "cliente-nao-encontrado";
 		}
 		repository.delete(p);
-		return "redirect:/produto/list";
+		return "redirect:/cliente/list";
 	}
 	
 }

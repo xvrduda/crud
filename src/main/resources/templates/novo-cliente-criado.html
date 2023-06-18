@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Novo Cliente Criado</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1>Novo cliente criado!</h1>
+		<table border="1">
+			<tr>
+				<th>ID:</th>
+				<td>
+					<span th:text="${novoCliente.id}"></span>
+				</td>
+			</tr>
+			<tr>
+				<th>Nome:</th>
+				<td>
+					<span th:text="${novoCliente.nome}"></span>
+				</td>
+			</tr>
+			<tr>
+				<th>Telefone:</th>
+				<td>
+					<span th:text="${novoCliente.telefone}"></span>
+				</td>
+			</tr>
+			<tr>
+				<th>Data de nascimento:</th>
+				<td>
+					<span th:text="${novocliente.data_nasc}"></span>
+				</td>
+			</tr>
+			<tr>
+				<th>Cpf:</th>
+				<td>
+					<span th:text="${novocliente.cpf}"></span>
+				</td>
+			</tr>
+			<tr>
+				<th>Endereço:</th>
+				<td>
+					<span th:text="${novocliente.endereco}"></span>
+				</td>
+			</tr>
+			<tr>
+				<th>Cidade:</th>
+				<td>
+					<span th:text="${novocliente.cidade}"></span>
+				</td>
+			</tr>
+			<tr>
+				<th>Bairro:</th>
+				<td>
+					<span th:text="${novocliente.bairro}"></span>
+				</td>
+			</tr>
+			<tr>
+				<th>Cep:</th>
+				<td>
+					<span th:text="${novocliente.cep}"></span>
+				</td>
+			</tr>
+			<tr>
+				<th>E-mail:</th>
+				<td>
+					<span th:text="${novocliente.email}"></span>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

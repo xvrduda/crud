@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Detalhe Cliente</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1>Detalhe Cliente</h1>
+		<table border="1">
+			<tr>
+				<th>ID:</th>
+				<td>
+					<span th:text="${cliente.id}"></span>
+				</td>
+			</tr>
+			<tr>
+				<th>Nome:</th>
+				<td>
+					<span th:text="${cliente.nome}"></span>
+				</td>
+			</tr>
+			<tr>
+				<th>Telefone:</th>
+				<td>
+					<span th:text="${cliente.telefone}"></span>
+				</td>
+			</tr>
+			<tr>
+				<th>Data de nascimento:</th>
+				<td>
+					<span th:text="${cliente.data_nasc}"></span>
+				</td>
+			</tr>
+			<tr>
+				<th>Cpf:</th>
+				<td>
+					<span th:text="${cliente.cpf}"></span>
+				</td>
+			</tr>
+			<tr>
+				<th>Endereço:</th>
+				<td>
+					<span th:text="${cliente.endereco}"></span>
+				</td>
+			</tr>
+			<tr>
+				<th>Cidade:</th>
+				<td>
+					<span th:text="${cliente.cidade}"></span>
+				</td>
+			</tr>
+			<tr>
+				<th>Bairro:</th>
+				<td>
+					<span th:text="${cliente.bairro}"></span>
+				</td>
+			</tr>
+			<tr>
+				<th>Cep:</th>
+				<td>
+					<span th:text="${cliente.cep}"></span>
+				</td>
+			</tr>
+			<tr>
+				<th>E-mail:</th>
+				<td>
+					<span th:text="${cliente.email}"></span>
+				</td>
+			</tr>
+		</table>
+		<a th:href="@{/cadastro/list}">Lista</a>
+	</body>
+</html>

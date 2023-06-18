@@ -12,16 +12,32 @@ public class Cliente {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 		private Integer id;
 		private String nome;
-		private String descricao;
-		private double preco;
+		private String telefone;
+		private String data_nasc;
+		private String cpf;
+		private String endereco;
+		private String cidade;
+		private String bairro;
+		private String cep;
+		private String email;
+		private String senha;
+		
 		public Cliente() {
 			this.id = 0;
 		}
-		public Cliente(int id, String nome, String descricao, double preco) {
+		public Cliente(int id, String nome, String telefone, String data_nasc, String cpf, String endereco, String cidade,
+				String bairro,String cep, String email, String senha) {
 		this.id = id;
 		this.nome = nome;
-		this.descricao = descricao;
-		this.preco = preco;
+		this.telefone = telefone;
+		this.data_nasc = data_nasc;
+		this.cpf = cpf;
+		this.endereco = endereco;
+		this.cidade = cidade;
+		this.bairro = bairro;
+		this.cep = cep;
+		this.email = email;
+		this.senha = senha;
 		}
 		public int getId() {
 		return id;
@@ -35,21 +51,68 @@ public class Cliente {
 		public void setNome(String nome) {
 		this.nome = nome;
 		}
-		public String getDescricao() {
-		return descricao;
+		
+		public String getTelefone() {
+			return telefone;
 		}
-		public void setDescricao(String descricao) {
-		this.descricao = descricao;
+		public void setTelefone(String telefone) {
+			this.telefone = telefone;
 		}
-		public double getPreco() {
-		return preco;
+		public String getData_nasc() {
+			return data_nasc;
 		}
-		public void setPreco(double preco) {
-		this.preco = preco;
+		public void setData_nasc(String data_nasc) {
+			this.data_nasc = data_nasc;
+		}
+		public String getCpf() {
+			return cpf;
+		}
+		public void setCpf(String cpf) {
+			this.cpf = cpf;
+		}
+		public String getEndereco() {
+			return endereco;
+		}
+		public void setEndereco(String endereco) {
+			this.endereco = endereco;
+		}
+		public String getCidade() {
+			return cidade;
+		}
+		public void setCidade(String cidade) {
+			this.cidade = cidade;
+		}
+		public String getBairro() {
+			return bairro;
+		}
+		public void setBairro(String bairro) {
+			this.bairro = bairro;
+		}
+		public String getCep() {
+			return cep;
+		}
+		public void setCep(String cep) {
+			this.cep = cep;
+		}
+		public String getEmail() {
+			return email;
+		}
+		public void setEmail(String email) {
+			this.email = email;
+		}
+		public String getSenha() {
+			return senha;
+		}
+		public void setSenha(String senha) {
+			this.senha = senha;
+		}
+		public void setId(Integer id) {
+			this.id = id;
 		}
 		@Override
 		public String toString() {
-		return "Produto [id=" + id + ", nome=" + nome + ", descricao=" + 
-		descricao + ", preco=" + preco + "]";
+		return "Cliente [id=" + id + ", nome=" + nome + ", telefone=" + 
+		telefone + ", data_nasc=" + data_nasc + ", cpf=" + cpf + ", endereco=" + endereco + ", cidade=" + cidade +
+		", bairro=" + bairro + ", cep=" + cep + ", email=" + email +"]";
 		}
 }
