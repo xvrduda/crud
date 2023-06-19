@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>São Paulo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="/1-Bootstrap/Scroll.js">
+    <link rel="stylesheet" href="BaseBoard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="shortcut icon" href="imagem/logo_telegram_airplane_air_plane_paper_airplane_icon_143170.png" type="image/x-icon">
+    <link rel="stylesheet" href="hr.css">
+    <link rel="stylesheet" href="sidebar.js">
+    <link rel="stylesheet" href="sidebar.css">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"  />
+    <link rel="shortcut icon" href="imagem/icon_aviao.png" type="image/x-icon">
+    <link rel="stylesheet" href="txt.css">
+    <link rel="stylesheet" href="contentdescri.css">
+    <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="background.css">
+    <link rel="stylesheet" href="button.css">
+       
+</head>
+<body>
+
+          <!-- Imagem e texto -->
+<!-- <nav class="navbar sticky-top navbar-light bg-light" >
+    <a class="navbar-brand" href="#">
+      <img src="imagem/logo.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+      Dreams Tourism
+    </a>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Aonde você quer ir?" aria-label="Pesquisar">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color: #8c54ff; border-color: #8c54ff;  color: white;">Pesquisar</button>
+    </form>
+    <div class="btn-group dropleft">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          <img src="Imagem/icons8-cardápio.svg">
+        </button>
+              <div class="dropdown-menu">
+                
+            
+                <span class="dropdown-item-text">Suas opções</span>
+                <a class="dropdown-item" href="#boxs">Sobre Nós</a>
+                <a class="dropdown-item" href="#">Minhas viagens</a>
+                <a class="dropdown-item" href="login.html">Login</a>
+              </div>
+      </div>
+</nav> -->
+
+       <!-- navegador e sidebar -->
+       <nav class="navbar sticky-top navbar-light bg-light" >
+        <div class="logo">
+          <i class="bx bx-menu menu-icon"></i>
+          <span class="logo-name">dreams tourism</span>
+        </div>
+        <div class="sidebar">
+          <div class="logo">
+            <i class="bx bx-menu menu-icon"></i>
+            <span class="logo-name">Dreams tourism</span>
+          </div>
+      
+          <div class="sidebar-content">
+            <ul class="lists">
+              <li class="list">
+                <a href="#" class="nav-link">
+                  <i class="bx bx-home-alt icon"></i>
+                  <span class="link">Início</span>
+                </a>
+              </li>
+              <li class="list">
+                <a href="#" class="nav-link">
+                  <i class="bx bx-bar-chart-alt-2 icon"></i>
+                  <span class="link">Nossos serviços</span>
+                </a>
+              </li>
+              <li class="list">
+                <a href="#" class="nav-link">
+                  <i class="bx bx-bell icon"></i>
+                  <span class="link">Notificações</span>
+                </a>
+              </li>
+             
+              
+              <li class="list">
+                <a href="#" class="nav-link">
+                  <i class="bx bx-heart icon"></i>
+                  <span class="link">Likes</span>
+                </a>
+              </li>
+            
+            </ul>
+      
+            <div class="bottom-cotent">
+              <li class="list">
+                <a href="#" class="nav-link">
+                  <i class="bx bx-cog icon"></i>
+                  <span class="link">Configurações</span>
+                </a>
+              </li>
+              <li class="list">
+                <a href="login.html" class="nav-link">
+                  <i class='bx bx-log-in icon'></i>
+                  <span class="link">Entrar</span>
+                </a>
+              </li>
+            </div>
+          </div>
+        </div>
+      </nav>
+      
+      <section class="overlay"></section>
+
+                <!-- carrosel de img -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" >
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="imagem/img_repre_museu_ipiranga_1500x600.png" alt="Primeiro Slide">
+                <div class="carousel-caption d-none d-md-block">
+            <h5>Ilha Bela</h5>
+              <p>Para mais informações consulte os Pacotes Exclusivos.</p>
+          </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="imagem/img_repre_sp1500x600.png" alt="Segundo Slide">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Ubatuba</h5>
+                    <p>Para mais informações consulte os Pacotes Exclusivos.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="imagem/img_repre_embu1500x600px.svg" alt="Terceiro Slide">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Embu das Artes</h5>
+                    <p>Para mais informações consulte os Pacotes Exclusivos.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="imagem/img_repre_são_paulo_1500x600.png" alt="Quarto Slide">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Holambra</h5>
+                    <p>Para mais informações consulte os Pacotes Exclusivos.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="./imagem/img_repre_sp1500x600.png" alt="Quinto Slide">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Boituva</h5>
+                    <p>Para mais informações consulte os Pacotes Exclusivos.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="imagem/imgre_repre_sp_cidade (1600 × 500 px).png" alt="Sexto Slide">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Campos do Jordão</h5>
+                    <p>Para mais informações consulte os Pacotes Exclusivos.</p>
+                </div>
+            </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+        </a>
+    </div>
+    <!-- legenda -->
+    <div  style="text-align:center ;"> <br> <br>
+        <h3>Pacotes para São Paulo</h3>
+</div>
+
+<br><br>
+  
+   
+<!-- card de Descrição -->
+<div class="back"> <!-- imagenzinha de fundo -->
+<div class="card-deck" style="position: relative;   width:90%; left: 5%; top: 25px;">
+    <div class="card" >
+       
+        <div class="card-body">
+            <h3 class="card-title">Onde ficar em São Paulo</h3>
+            <p class="card-text">Os melhores bairros para ficar em São Paulo  são:<br><br>
+            
+            Morumbi <br>
+            Alphaville <br>
+            Paulista <br>
+            .... <br></p>
+            
+        </div>
+    </div>
+    
+    <div class="card">
+        
+        <div class="card-body">
+            <h3 class="card-title">O que fazer em São Paulo?</h3>
+            <p class="card-text"> Além dos inúmeros pontos Turisticos da cidade, como a Avenida Paulista, em São Paulo há varias praias lindas como Ilha Bela e Ubatuba, varios parques, e o interior do Estado contém varias cidades turistas para você conhecer.</p>
+           
+        </div>
+    </div>
+    <div class="card">
+        
+        <div class="card-body">
+            <h3 class="card-title">Onde comer em São Paulo?</h3>
+            <p class="card-text"> ....</p>
+            
+        </div>
+        
+    </div>
+  </div>
+  
+    <!-- linha -->
+    <hr width="95%">
+</div>
+ <br> <br>
+<div class="txt">
+<h3>Descrição:</h3>
+<div class="txt" style="font-size: 20px; ">
+    <P> .....</p> <br>
+</div>
+</div>
+</div>
+
+<!-- linha -->
+<hr width="95%">
+<!-- legenda -->
+<div class="txt"> <br>
+    <h3>Informações Adicionais:</h3> <br>
+    <div class="txt" style="font-size: 20px; ">
+        <p>
+            - .... <br>
+            - .... <br>
+            - .... <br>
+            - .... <br> <br>
+        </p>
+    </div>
+</div>
+
+<!-- linha -->
+<hr width="95%">
+
+
+
+
+
+
+
+<!-- rodapé -->
+<!-- link js -->
+<footer>
+    <div class="boxs">
+        <h2>Início</h2>
+        <ul>
+            <li><a href="#"></a>Home</li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+        </ul>
+    </div>
+    <div class="boxs">
+        <h2>Contato</h2>
+        <ul>
+            <li><a href="#"></a>Endereço</li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+        </ul>
+    </div>
+    <div class="boxs">
+        <h2>Suporte</h2>
+        <ul>
+            <li><a href="#"></a>Fale conosco</li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+        </ul>
+    </div>
+    <div class="boxs">
+        <h2>Sobre nós</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam rerum inventore minus! Quae ratione officiis
+            asperiores dolorum necessitatibus aperiam facilis voluptatem similique, eveniet illo itaque, laboriosam
+            omnis aspernatur, quas labore minus consequatur amet rem sapiente!
+        </p>
+    </div>
+    
+    <!--rodaope-->
+</footer>
+<div class="footer">
+    <img src="imagem/logo.svg" alt="Dreams Tourism" style="width:40px; height: 40px;">
+    <h2 style="position: relative; left: -30%; top: 5px;">Dreams Tourism</h2>
+    <div class="sociais">
+        <div class="social">
+            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        </div>
+        <div class="social">
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        </div>
+        <div class="social">
+            <a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+crossorigin="anonymous"></script>
+</body>
+</html>
