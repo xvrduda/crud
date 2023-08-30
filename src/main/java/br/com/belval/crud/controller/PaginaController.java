@@ -31,6 +31,36 @@ public class PaginaController {
 		ModelAndView modelAndView = new ModelAndView("pacote-sao-paulo");
 		return modelAndView;
 	}
+	@GetMapping("/pacote/bahia")
+	public ModelAndView pacote4() {
+		ModelAndView modelAndView = new ModelAndView("pacote-sao-paulo");
+		return modelAndView;
+	}
+	@GetMapping("/pacote/floripa")
+	public ModelAndView pacote5() {
+		ModelAndView modelAndView = new ModelAndView("pacote-sao-paulo");
+		return modelAndView;
+	}
+	@GetMapping("/pacote/fortaleza")
+	public ModelAndView pacote6() {
+		ModelAndView modelAndView = new ModelAndView("pacote-sao-paulo");
+		return modelAndView;
+	}
+	@GetMapping("/pacote/natal")
+	public ModelAndView pacote7() {
+		ModelAndView modelAndView = new ModelAndView("pacote-sao-paulo");
+		return modelAndView;
+	}
+	@GetMapping("/pacote/fernando/de/noronha")
+	public ModelAndView pacote8() {
+		ModelAndView modelAndView = new ModelAndView("pacote-sao-paulo");
+		return modelAndView;
+	}
+	@GetMapping("/pacote/rio/de/janeiro")
+	public ModelAndView pacote9() {
+		ModelAndView modelAndView = new ModelAndView("pacote-sao-paulo");
+		return modelAndView;
+	}
 	@GetMapping("/pagina/login")
 	public ModelAndView login() {
 		ModelAndView modelAndView = new ModelAndView("pagina-login");

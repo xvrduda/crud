@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration</title>
+    <!-- css -->
+    <link rel="stylesheet" href="projetinho.css" />
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"  rel="stylesheet" />
+</head>
+<body >
+
+    <!-- Login -->
+<div class="container" id="myInput">
+      
+    <header>registration</header>
+
+    <form action="/cliente/novo" method="post" class="form" >
+
+       <input type="hidden" name="id" th:value="${cliente.id}"> <br>
+      <fieldset>
+          <!-- campo nome -->
+          <div class="input-box">
+            <label>Nome completo</label>
+            <input class"input" name="nome" id="nome"  type="text" th:value="${cliente.nome}" placeholder=" Digite o nome completo" required />
+          </div>
+
+          <!-- campo telefone -->
+          <div class="column">
+            <div class="input-box">
+              <label>Número de telefone</label>
+              <input  class"input" name="telefone" id="telefone" type="text" th:value="${cliente.telefone}" placeholder="11 99999-9999" />
+            </div>
+
+            <!-- campo data -->
+            <div class="input-box">
+              <label>Data de nasimento</label>
+              <input  class"input" name="data_nasc" id="data_nasc" type="date" th:value="${cliente.data_nasc}" required />
+            </div>
+          </div>
+
+          <!-- campo cpf -->  
+          <div class="input-box">
+            <label>Cpf</label>
+            <input  class"input" name="cpf" id="cpf" type="cpf"  th:value="${cliente.cpf}"  placeholder="Digite o seu cpf" required />
+          </div>
+     </fieldset>
+     <fieldset>
+          <!-- campo endereco -->
+          <div class="input-box address">
+            <label>Endereço</label>
+            <input   class"input" name="endereco" id="endereco" type="text"   th:value="${cliente.endereco}" placeholder="Digite o seu endereço" required />
+            <div class="column">
+            </div>
+              <input   class"input" name="cidade" id="cidade" type="text"  th:value="${cliente.cidade}" placeholder="Digite a sua cidade" required />
+            </div>
+            <div>
+              <input  class"input" name="bairro" id="bairro" type="text"  th:value="${cliente.bairro}" placeholder="Digite seu bairro" required />
+              <input  class"input" name="cep" id="cep"  type="text"  th:value="${cliente.cep}" placeholder="Digite seu Cep" />
+            </div>
+          </div>
+
+      </fieldset>
+      <fieldset>
+         <!-- campo email -->
+         <div class="field email-field">
+          <div class="input-field">
+            <input  class"input" name="email" id="email" type="email" placeholder="Digite seu email"   th:value="${cliente.email}"class="email" />
+          </div>
+          <span class="error email-error">
+            <i class="bx bx-error-circle error-icon"></i>
+            <p class="error-text">Por favor digite um email válido</p>
+          </span>
+        </div>
+        <!-- campo senha -->
+        <div class="field create-password">
+          <div class="input-field">
+            <input  class"input" name="senha" id="senha" type="password" placeholder="Criar senha" class="password" />
+            <i class="bx bx-hide show-hide"></i>
+          </div>
+          <span class="error password-error">
+            <i class="bx bx-error-circle error-icon"></i>
+            <p class="error-text">
+              Por favor, insira pelo menos 8 caracteres com número, símbolo, letras minúsculas e maiúsculas.
+            </p>
+          </span>
+        </div>
+        <div class="field confirm-password">
+          <div class="input-field">
+            <input
+              type="password" placeholder="Confirme a senha"  th:value="${cliente.senha}" class="Password"/>
+              <i class="bx bx-hide show-hide"></i>
+          </div>
+          <span class="error Password-error">
+            <i class="bx bx-error-circle error-icon"></i>
+            <p class="error-text">A senha não corresponde </p>
+          </span>
+        </div>
+    </fieldset>
+
+          <button type="submit" value="Enviar">Enviar</button>
+        
+   </form> 
+</div>
+             <!-- JavaScript -->
+      <script src="projetinho.js"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+      <script src="sidebar.js"></script>
+</body>
+</html> 

@@ -1,0 +1,20 @@
+
+.body{
+    background: linear-gradient(to right, #8c54ff, #75e6da); 
+    font-family: sans-serif;
+}
+.card{
+    width: 700px;
+    margin: auto;
+    top: 20px;
+    position: relative;
+    background:rgb(238, 238, 238);
+    border-radius: 10px;
+    margin: 100px auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.24);
+}
+.table{
+	background-color: white;
+}
